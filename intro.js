@@ -1071,7 +1071,9 @@
     }
 
     //Set focus on "next" button, so that hitting Enter always moves you onto the next step
-    nextTooltipButton.focus();
+    if (typeof nextTooltipButton !== "undefined" && nextTooltipButton != null) {
+      nextTooltipButton.focus();
+    }
 
     //add target element position style
     targetElement.element.className += ' introjs-showElement';
